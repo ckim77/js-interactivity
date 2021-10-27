@@ -50,7 +50,7 @@ const revealMessage = () => {
     message.classList.remove('hide');
     setTimeout(() => {
     message.classList.add('hide');
-    }, 800);
+    }, 1000);
 }
 
 // const revealMessage = () => {setTimeout(() => {message.classList.add('hide')}, 1000)}

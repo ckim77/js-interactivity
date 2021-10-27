@@ -31,9 +31,8 @@ form.addEventListener('submit', addMovie);
 const deleteMovie = event => {
     event.target.parentNode.remove();
     message.textContent = `${event.target.parentNode.textContent.slice(0,-1)} deleted!`;
-    // revealMessage();
+    revealMessage();
 }
-
 // step 4
 const crossOffMovie = event => {
     event.target.classList.toggle("checked");
@@ -42,34 +41,19 @@ const crossOffMovie = event => {
     } else {
         message.textContent = `${event.target.textContent} added back!`;
     }
-    // revealMessage();
+    revealMessage();
 }
 
 // Intermediate 1
 
-// const revealMessage = () => {
-//     setTimeout(cb, time);
-//     cb(message.classList.add('hide'));
-// }
+const revealMessage = () => {
+    message.classList.remove('hide');
+    setTimeout(() => {
+    message.classList.add('hide');
+    }, 800);
+}
 
-// let themeBtns = document.querySelectorAll('.theme-buttons')
-
-// const selectTheme = (event) => {
-//     let theme = event.target.textContent;
-//     document.querySelector('body').className = theme;
-//     document.querySelector('main').className = theme;
-//     let btns = document.querySelectorAll('button');
-
-//     for (let i = 0; i < btns.length; i++) {
-//         btns[i].className = theme;
-//     }
-// }
-
-// for  (let i = 0; i < themeBtns.length; i++) {
-//     themeBtns[i].addEventListener('click', () => {
-//         selectTheme(event);
-//     })
-// }
+// const revealMessage = () => {setTimeout(() => {message.classList.add('hide')}, 1000)}
 
 
 

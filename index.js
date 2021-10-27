@@ -30,20 +30,27 @@ form.addEventListener('submit', addMovie);
 
 const deleteMovie = event => {
     event.target.parentNode.remove();
-    message.textContent = "Movie deleted!";
+    message.textContent = `${event.target.parentNode.textContent.slice(0,-1)} deleted!`;
+    // revealMessage();
 }
 
 // step 4
 const crossOffMovie = event => {
     event.target.classList.toggle("checked");
     if (event.target.classList.contains('checked')) {
-        message.textContent = 'Movie watched!';
+        message.textContent =  `${event.target.textContent} watched!`;
     } else {
-        message.textContent = "Movie added back!"
+        message.textContent = `${event.target.textContent} added back!`;
     }
+    // revealMessage();
 }
 
+// Intermediate 1
 
+// const revealMessage = () => {
+//     setTimeout(cb, time);
+//     cb(message.classList.add('hide'));
+// }
 
 // let themeBtns = document.querySelectorAll('.theme-buttons')
 

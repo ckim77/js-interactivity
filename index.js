@@ -53,10 +53,21 @@ const revealMessage = () => {
     }, 1000);
 }
 
-// const revealMessage = () => {setTimeout(() => {message.classList.add('hide')}, 1000)}
+// some extra stuff
+
+// const colorChange = event => {
+//     event.target.style.color = "black";
+//     event.target.style.backgroundColor = 'yellow';
+// }
 
 
+// const changeBack = event => {
+//     event.target.style.color = 'white';
+//     event.target.style.backgroundColor = 'teal';
+// }
 
-
+// let addButton = document.getElementById("add-button");
+// addButton.addEventListener('mouseover', colorChange);
+// addButton.addEventListener('mouseout', changeBack);
 
 
